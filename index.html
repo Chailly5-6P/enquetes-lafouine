@@ -1,25 +1,76 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Enquête Lafouine</h1>
-<p>Appuie sur le bouton qui correspond au numéro de l'enquête que tu fais.</p>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
 
-<button onclick="enquete(1)">N°1</button>
-<button onclick="enquete(2)">N°2</button>
-<button onclick="enquete(3)">N°3</button>
-<button onclick="enquete(4)">N°4</button>
-<button onclick="enquete(5)">N°5</button>
-<button onclick="enquete(6)">N°6</button>
-<button onclick="enquete(7)">N°7</button>
-<button onclick="enquete(8)">N°8</button>
-<button onclick="enquete(9)">N°9</button>
+    <link rel="stylesheet" href="/merlot/assets/css/style.css" media="screen">
+    <link rel="stylesheet" href="/merlot/assets/css/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="/merlot/assets/css/non-screen.css" media="handheld, only screen and (max-device-width:640px)">
+
+    <script type="text/javascript" src="/merlot/assets/js/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/merlot/assets/js/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+
+  </head>
+
+  <body>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Enquêtes Lafouine</h1>
+            <h2>Sauras-tu trouver le coupable ?</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+        <section id="downloads">
+          <span class="inner">
+           <!-- <a href="https://github.com/pages-themes/merlot/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/pages-themes/merlot/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+              -->          
+          </span>
+        </section>
+      <span class="banner-fix"></span>
+      <section id="main_content">
+
+        <p>Appuie sur le bouton qui correspond au numéro de l'enquête que tu fais.</p>
+
+        <button onclick="enquete(1)">N°1</button>
+        <button onclick="enquete(2)">N°2</button>
+        <button onclick="enquete(3)">N°3</button>
+        <button onclick="enquete(4)">N°4</button>
+        <button onclick="enquete(5)">N°5</button>
+        <button onclick="enquete(6)">N°6</button>
+        <button onclick="enquete(7)">N°7</button>
+        <button onclick="enquete(8)">N°8</button>
+        <button onclick="enquete(9)">N°9</button>
 
 
-<p id="enquete"></p>
-<p id="resultat"></p>
-  
-</body>
-  
+        <p id="enquete"></p>
+        <p id="resultat"></p>
+
+      </section>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+              <p>Ce projet scolaire peut être trouvé sur <a href="https://github.com/Chailly5-6P/enquetes-lafouine">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <span class="octocat"></span>
+      </footer>
+    </div>
+  </body>
+
 <script>
     function enquete(index) {
   actuel = document.getElementById("enquete");
