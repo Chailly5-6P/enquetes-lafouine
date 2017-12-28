@@ -4,7 +4,7 @@
 	transition: all .5s;
 }
 
-button { 
+.button { 
 	display: inline-block; 
 	padding: 5px 20px;
 	color: white;
@@ -52,4 +52,9 @@ button {
 			bottom: -3px;
 		}	
 	}
+}
+
+footer span.ribbon-inner p {
+    padding-top: 2px;
+	text-transform:none !important;
 }
