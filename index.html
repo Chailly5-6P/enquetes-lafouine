@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Enquête Lafouine</h1>
+<p>Appuie sur le bouton qui correspond au numéro de l'enquête que tu fais.</p>
+
+<button onclick="enquete(1)">N°1</button>
+<button onclick="enquete(2)">N°2</button>
+<button onclick="enquete(3)">N°3</button>
+<button onclick="enquete(4)">N°4</button>
+<button onclick="enquete(5)">N°5</button>
+<button onclick="enquete(6)">N°6</button>
+<button onclick="enquete(7)">N°7</button>
+<button onclick="enquete(8)">N°8</button>
+<button onclick="enquete(9)">N°9</button>
+
+
+<p id="enquete"></p>
+<p id="resultat"></p>
+  
+</body>
+  
+<script>
+    function enquete(index) {
+  actuel = document.getElementById("enquete");
+    actuel.innerHTML = `<h2> Qui est le coupable dans l'enquête N° `+
+      index+
+      ` ?</h2>
+<form name="resultForm" onsubmit="return validate(`+index+`)" method="post">
+Nom: <input type="text" name="fname">
+<input type="submit" value="Valider">
+</form>`;
+  document.getElementById("resultat").innerHTML = "";
+}
+
+var coupables = ["Lafouine", 
+                 "Volvo",
+                 "BMW"];
+
+function validate(index) {
+  result = document.getElementById("resultat");
+  
+  var x = document.forms["resultForm"]["fname"].value;
+    if (x == "") {
+        alert("Attention, tu n'as pas rentré de nom, recommence !");
+        return false;
+    } else if (x == coupables[index-1]) {
+      result.innerHTML = "<h3>Coupable !</h3>";
+      result.innerHTML += "Bravo ! Tu as trouvé le coupable ! ☺";
+      return false;
+    }
+  result.innerHTML = "<h3>Mince... Tu viens d'arrêter un innocent !</h3>"
+  result.innerHTML += "Le coupable court toujours... ☹";
+  return false;
+}
+</script>
+  
+</html>
