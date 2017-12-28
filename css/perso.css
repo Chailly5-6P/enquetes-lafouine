@@ -59,12 +59,12 @@ footer span.ribbon-inner p {
 	text-transform:none !important;
 }
 
+section#downloads a.zip {
+	width: 550px;
+}
+
 section#downloads a.zip:hover {
 	float:left;
     background-position: 0 0px;
 }
 
-section#downloads a.tgz {
-    float: right;
-    background-position: -275px 0;
-}
