@@ -143,7 +143,7 @@ var coupables = ["Lafouine",
 function validate(index) {
   result = document.getElementById("resultat");
   
-  var x = document.forms["resultForm"]["fname"].value;
+  var x = document.forms["resultForm"]["fname"].value.trim();
     if (x == "") {
         alert("Attention, tu n'as pas rentré de nom, recommence !");
         return false;

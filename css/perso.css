@@ -6,9 +6,11 @@ button {
 	vertical-align: middle;
 	font-family: 'Rubik One', sans-serif;
 	text-decoration: none;
-	font-size: 4vw;
+	font-size: 12pt;
+	min-width: 97px;
+
 	transition: all .5s;
-	background-color: #3498db;
+	background-color: #5B7F98;
 
 	&::before {
     @extend %test;
@@ -17,7 +19,7 @@ button {
 		width: 100%;
 		left: 8px;
 		transform: skewX(45deg);
-		background-color: darken(#3498db, 20%);
+		background-color: darken(#5B7F98, 20%);
 	}
 
 	&::after {
@@ -27,7 +29,7 @@ button {
 		width: 15px;
 		bottom: -8px;
 		transform: skewY(45deg);
-		background-color: darken(#3498db, 30%);
+		background-color: darken(#5B7F98, 30%);
 	}
 
 	&:active {
